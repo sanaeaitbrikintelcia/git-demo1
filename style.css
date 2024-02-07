@@ -1,0 +1,70 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+body {
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background: #212121;
+}
+.wrapper {
+position: relative;
+height: 330px;
+width: 400px;
+perspective: 1000px;
+}
+.wrapper .flip-card {
+position: relative;
+height: 100%;
+width: 100%;
+border-radius: 15px;
+transform-style: preserve-3d;
+transition: all 1s ease-in-out;
+}
+.wrapper:hover .flip-card {
+transform: rotateY(180deg);
+}
+.flip-card .card {
+display: flex;
+align-items: center;
+justify-content: center;
+height: 100%;
+width: 100%;
+background: pink;
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+backface-visibility: hidden;
+position: absolute;
+flex-direction: column;
+}
+.front.card {
+background-image: url(1.jpg);
+background-size: cover;
+background-position: center center;
+border-radius: 15px;
+}
+.back.card {
+transform: rotateY(180deg);
+color: #fff;
+border-radius: 15px;
+}
+.back.card h2 {
+font-family: bebas neue;
+margin-bottom: 7px;
+font-size: 40px;
+letter-spacing: 2px;
+ 
+.back.card p {
+width: 85%;
+text-align: center;
+}
+.socials {
+margin-top: 20px;
+}
+.socials i {
+margin: 0 10px;
+font-size: 20px;
+}
